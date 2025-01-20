@@ -428,3 +428,16 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+#construction-banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    margin-top: 50px;
+}
