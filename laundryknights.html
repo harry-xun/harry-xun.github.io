@@ -7,69 +7,101 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style>
-        .back-to-home {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 15px;
-            font-size: 14px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
         }
 
-        .back-to-home:hover {
-            background-color: #0056b3;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        #construction-banner {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343a40;
+            text-align: center;
+        }
+
+        h3 {
+            color: #495057;
+            font-weight: bold;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #6c757d;
+            text-align: left;
+        }
+
+        .project-image {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-muted {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #212529;
+            padding: 15px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Construction Banner -->
     <div id="construction-banner" class="bg-warning text-dark text-center py-2">
         ⚠️ This website is under construction. ⚠️
     </div>
 
-    <!-- Main -->
     <div class="container my-5 pt-5">
-        <h1 class="text-center my-4">Laundry Kngihts</h1>
-        
-        <!-- Team Members -->
-        <h3 class="text-center mt-4">Team Members</h3>
-        <p class="text-center text-muted">Stella Thompson, Clark Glymph, Eva Cao, Harry Xun</p>
-        
-        <!-- Short Description -->
-        <h3 class="text-center mt-4">Project Overview</h3>
-        <p class="text-center text-muted">Laundry at Carleton is tough—finding an available machine, setting a timer, and hoping no one interferes with your load. Once the wash is done, you rush back, hoping for an open dryer, but delays often force us to wait or take wet clothes back to our dorms. A laundry tracking system would benefit both students and staff managing these spaces.</p>
-        
-        <!-- Project Images -->
+        <h1>Laundry Knights</h1>
+
+        <h3>Team Members</h3>
+        <p>Stella Thompson, Clark Glymph, Eva Cao, Harry Xun</p>
+
+        <h3>Project Overview</h3>
+        <p>
+            Laundry at Carleton is tough—finding an available machine, setting a timer, and hoping no one interferes with your load. 
+            Once the wash is done, you rush back, hoping for an open dryer, but delays often force us to wait or take wet clothes back to our dorms. 
+            A laundry tracking system would benefit both students and staff managing these spaces.
+        </p>
+
         <div class="text-center">
             <img src="img/dorm_selection.png" alt="Dorm selection page with buttons that enable users to select their dorm buildings" class="project-image">
             <p class="text-muted">Dorm Selection Page.</p>
-            
+
             <img src="img/homepage_nowash.png" alt="Homepage when user is not using any machine. There is a machine tracker frame and a using machine button." class="project-image">
             <p class="text-muted">Homepage when user is not using any machine</p>
-            
+
             <img src="img/homepage_wash.png" alt="Homepage when user is using machines, a timer of the machine used is added on the top." class="project-image">
             <p class="text-muted">Homepage when user is using machines</p>
         </div>
 
-        <h3 class="text-center mt-4">Prototype Description</h3>
-        <p class="text-center text-muted">Through interviews with users, we discovered that users primarily want to know whether there are available machines in their dorm building and how much time remains for their laundry cycle to complete. Based on these user needs, I developed a simple system prototype. The first page serves as the initial interface where users select their dorm building. Once selected, users are directed to the second screen, which presents a clear and visually intuitive display of available machines in their building. When a user clicks on a machine to start a cycle, the interface transitions to the third screen, featuring a prominently displayed timer to keep them informed of the remaining time.</p>
+        <h3>Prototype Description</h3>
+        <p>
+            Through interviews with users, we discovered that users primarily want to know whether there are available machines in their dorm building 
+            and how much time remains for their laundry cycle to complete. Based on these user needs, I developed a simple system prototype. 
+            The first page serves as the initial interface where users select their dorm building. 
+            Once selected, users are directed to the second screen, which presents a clear and visually intuitive display of available machines in their building. 
+            When a user clicks on a machine to start a cycle, the interface transitions to the third screen, featuring a prominently displayed timer to keep them informed of the remaining time.
+        </p>
     </div>
 
-    <!-- Back to Hompage -->
-    <a href="index.html" class="back-to-home">
-        Back to Homepage
-    </a>
+    <a href="index.html" class="back-to-home">Back to Homepage</a>
 
-    <!-- Foot -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-white">
         &copy; Harry Xun, All Rights Reserved.
     </footer>
 
