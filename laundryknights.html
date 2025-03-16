@@ -96,6 +96,37 @@
             width: 55%;
         }
 
+        .high-fidelity-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .high-fidelity-container {
+            flex: 1;
+            max-width: 30%; 
+            text-align: center;
+        }
+
+        .high-fidelity-gif {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .high-fidelity-caption {
+            text-align: center;
+            font-size: 1rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+
         footer {
             background-color: #212529;
             padding: 15px;
@@ -276,18 +307,18 @@
                 Additionally, to address the issue of users not being able to find the return button on this page, I designed a highly visible return button and placed it in the upper left corner, following user recommendations. This improvement should make the interface more intuitive and easier to navigate.
             </p>
             <h3 class="mb-4">High Fidelity Prototype</h3>
-            <div class="gif-row">
-                <div class="gif-container">
-                    <img src="img/highpro1.gif" alt="GIF showing the high fidelity interaction flow of viewing available machines" class="prototype-gif">
-                    <p class="image-caption">View Available Machines</p>
+            <div class="high-fidelity-row">
+                <div class="high-fidelity-container">
+                    <img src="img/highpro1.gif" alt="GIF showing high fidelity interaction for viewing available machines" class="high-fidelity-gif">
+                    <p class="high-fidelity-caption">View Available Machines</p>
                 </div>
-                <div class="gif-container">
-                    <img src="img/highpro2.gif" alt="GIF showing the high fidelity interaction flow of tracking laundry" class="prototype-gif">
-                    <p class="image-caption">Laundry Status Tracking</p>
+                <div class="high-fidelity-container">
+                    <img src="img/highpro2.gif" alt="GIF showing high fidelity interaction for tracking laundry" class="high-fidelity-gif">
+                    <p class="high-fidelity-caption">Laundry Status Tracking</p>
                 </div>
-                <div class="gif-container">
-                    <img src="img/highpro3.gif" alt="GIF showing the high fidelity interaction flow of avoiding conflicts" class="prototype-gif">
-                    <p class="image-caption">Avoiding Conflicts/Issues</p>
+                <div class="high-fidelity-container">
+                    <img src="img/highpro3.gif" alt="GIF showing high fidelity interaction for avoiding conflicts" class="high-fidelity-gif">
+                    <p class="high-fidelity-caption">Avoiding Conflicts/Issues</p>
                 </div>
             </div>
             <h3 class="mb-4">Future Plan</h3>
