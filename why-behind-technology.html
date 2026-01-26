@@ -193,7 +193,8 @@
 
             <div class="image-row">
                 <div class="image-container">
-                    <img src="img/fulladder.png" class="project-image projectshowcase" alt="Block diagram of a full adder">
+                    <img src="img/fulladder.png" class="project-image projectshowcase"
+                        alt="Block diagram of a full adder">
                     <div class="image-caption">Full Adder Block Diagram</div>
                 </div>
             </div>
@@ -228,7 +229,7 @@
                 <div class="image-container">
                     <img src="img/2bitadder_example.png" class="project-image projectshowcase"
                         alt="Example of a 2-bit adder with X equal to 01 and Y equal to 10">
-                    <div class="image-caption">2-bit Adder Example (Blue indicates active circuits)</div>
+                    <div class="image-caption">2-bit Adder Example</div>
                 </div>
             </div>
 
@@ -237,6 +238,63 @@
                 In the diagram above, blue highlights indicate the activated components and signal paths.
                 As shown, the system correctly outputs the sum 011.
             </p>
+            <h4 class="mt-5">2-bit Subtraction</h4>
+            <p>
+                Next, we look at subtraction. Subtraction is more complex because handling borrows requires the use of
+                NOT gates.
+                We start with the full subtractor.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/fullsub.png" class="project-image projectshowcase"
+                        alt="Full subtractor block diagram (X0, Y0, Borrow In → Difference, Borrow)">
+                    <div class="image-caption">Full Subtractor Block Diagram</div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                The inputs are X0, Y0, and Borrow In, and the outputs are the Difference Bit and the Borrow Bit.
+                The Difference Bit represents the result of subtracting Y0 and Borrow In from X0 as a single bit.
+                The Borrow Bit indicates whether this subtraction needs to borrow from the next higher bit:
+                1 means a borrow is needed, and 0 means no borrow is needed.
+            </p>
+
+            <p class="mt-3">
+                Similarly, by combining a half subtractor and a full subtractor, we obtain a circuit that can perform
+                2-bit subtraction.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/2bitsub.png" class="project-image projectshowcase"
+                        alt="2-bit subtractor block diagram">
+                    <div class="image-caption">2-bit Subtractor Block Diagram</div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                This system performs 2-bit subtraction. The inputs are X and Y, and the output is Dif = X − Y.
+                X is represented as X1X0, Y is represented as Y1Y0, and the difference is represented as D1D0.
+                When the “−” indicator lights up, it means the result is negative, and the system does not currently
+                handle negative values.
+            </p>
+
+            <h4 class="mt-4">Example: X = 11, Y = 10</h4>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/2bitsub_example.png" class="project-image projectshowcase"
+                        alt="2-bit subtraction example">
+                    <div class="image-caption">2-bit Subtraction Example</div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                Using X = 11 and Y = 10 as an example, the result is 01, and the system correctly returns the expected
+                output.
+            </p>
+
         </section>
 
 
