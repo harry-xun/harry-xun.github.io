@@ -395,9 +395,106 @@
             an approach would not resolve philosophical disagreement, it might reveal how people implicitly
             understand computation in practice.
         </p>
-
-
     </div>
+
+    <div class="container my-5 pt-5">
+        <h1>Theme 2: GenAI and Epistemology</h1>
+
+        <section id="construction-theme2" class="my-5">
+            <h3>Construction</h3>
+
+            <p>
+                During Construction Week, we built our own API by calling Gemini’s LLM API together
+                with our own designed instruction prompt. My instruction prompt was very simple:
+                it defines the model as an AI assistant that helps with work and study.
+            </p>
+
+            <p>
+                After that, I interacted with the system through the command line.
+                Below is an example diagram.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/aicli.png" class="project-image projectshowcase"
+                        alt="Example of interacting with GenAI through command line">
+                    <div class="image-caption">
+                        Command Line Interaction Example
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                As shown, the system essentially keeps receiving user input and calling the API.
+                The symbol “&gt;” represents user input. At the moment, compatibility between the AI
+                system and the CLI system is not perfect. For example, when I type “quit,” the AI
+                understands that I want to exit, but the command line only accepts “exit” as the
+                termination command.
+            </p>
+
+            <p>
+                In the future, if we want to make the command line interface more intelligent, we
+                could integrate actions like ending or restarting conversations into the LLM’s own
+                outputs. This would make the system appear more adaptive and smarter.
+            </p>
+
+            <p class="mt-4">
+                Based on this, I also built a web system to interact with the AI model.
+                Below is a simple homepage view.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/aiweb1.png" class="project-image projectshowcase" alt="AI assistant web homepage">
+                    <div class="image-caption">
+                        AI Assistant Web Homepage
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                The GenAI assistant on this webpage is built using a lightweight Flask web application.
+                The system receives user prompts through URL parameters and sends them to the
+                GeminiClient for text generation. The model’s response is then directly displayed
+                on the webpage.
+            </p>
+
+            <p>
+                In terms of design, I intentionally kept the interface minimal, with only a single
+                “/ask” route for interaction. This choice was partly due to time constraints, and
+                partly because a minimal structure is sufficient and robust.
+            </p>
+
+            <p class="mt-4">
+                A simple interaction example is shown below.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/aiweb2.png" class="project-image projectshowcase" alt="AI assistant usage example">
+                    <div class="image-caption">
+                        AI Assistant Interaction Example
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                This example shows the output generated when using “who are you?” as the prompt.
+            </p>
+
+        </section>
+
+
+        <section id="deconstruction-theme2" class="my-5">
+            <h3>Deconstruction</h3>
+
+            <p>
+                <!-- Content to be added -->
+            </p>
+
+        </section>
+    </div>
+
 
     <footer class="text-white">
         &copy; Harry Xun, All Rights Reserved.
