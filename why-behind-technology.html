@@ -455,7 +455,7 @@
             <p class="mt-3">
                 The GenAI assistant on this webpage is built using a lightweight Flask web application.
                 The system receives user prompts through URL parameters and sends them to the
-                GeminiClient for text generation. The model’s response is then directly displayed
+                GeminiClient for text generation. The model's response is then directly displayed
                 on the webpage.
             </p>
 
@@ -681,56 +681,112 @@
                 client.send_image function.
             </p>
 
+            <p>
+                In addition to posting weather updates, my bot also supports user interaction.
+                Whenever another user mentions the bot in a post or comment, the bot
+                automatically replies with a text-only Northfield weather report.
+                Due to the current program structure, the bot only checks its inbox
+                and replies to all mentions each time I manually run the bot script.
+                A simple example is shown below.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/weather_reply.png" class="project-image projectshowcase" alt="reply example">
+                    <div class="image-caption">
+                        replying other users' message
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                Please ignore the spam warning shown in the image. The newly registered
+                account I used for testing the bot was automatically labeled as spam.
+                User interaction is implemented by reading the Bluesky notification
+                interface. I used
+                <code>client.app.bsky.notification.list_notifications()</code>
+                to retrieve all notifications associated with the bot account and check
+                whether a post mentions the bot. When the notification reason is
+                identified as <code>"mention"</code>, the program reads the corresponding
+                <code>uri</code> and <code>cid</code> as the reply target, and then generates
+                a reply message using the same method as the text-only post.
+            </p>
+
         </section>
+
 
         <section id="deconstruction-theme3" class="my-5">
             <h3>Deconstruction</h3>
 
-            <h4 class="mt-4">Class Discussion and My Reflection</h4>
-
             <p>
-
+                The pre-class readings and in-class discussions changed how I think about bots.
+                Before this course, my understanding of bots mostly came from Discord meme bots
+                and music bots. These bots are usually friendly and do not change the structure
+                of the platform in any serious way. However, the reading
+                “A categorisation of social media bot accounts” changed my view.
+                It helped me see how different types of bots can affect open social media
+                platforms at a system level. In that article, benign and malicious bots
+                are largely defined based on their original design intention.
+                During class discussion, we questioned whether intention is enough.
+                We agreed that a bot's design intention does not always match its actual impact.
+                For example, we discussed two bots with similar goals: one that mass-produces
+                short videos to gain traffic, and another that automatically posts about a
+                specific topic to attract followers. Even though their intentions are similar,
+                we reacted more negatively to the first one because it disrupts the viewing
+                experience. This made me realize that whether a bot is benign or malicious
+                depends not only on intention, but also on how it interacts with the platform
+                and users.
             </p>
 
             <p>
-
-            </p>
-
-            <h4 class="mt-5">Pre-class Readings and My Reflection</h4>
-
-            <p>
-
-            </p>
-
-            <p>
-
-            </p>
-
-            <h4 class="mt-5">Bias and System-Level Reflection</h4>
-
-            <p>
-
-            </p>
-
-            <p>
-
-            </p>
-
-            <h4 class="mt-5">Open Questions and Lingering Reflections</h4>
-
-            <p>
-
+                The impact of bots does not come only from the bot itself.
+                User interaction also changes the role of a bot.
+                The reading about Botivist influenced me a lot.
+                One important idea in that paper is that when users know they are
+                interacting with a bot, the communication results can change.
+                In some cases, transparency actually improves the relationship
+                between users and bots.
+                In class, we continued this discussion.
+                We first used a utilitarian perspective and asked whether social
+                media would be better overall if there were no bots.
+                Using Instagram as an example, we felt that it might improve.
+                I then raised a different question: what if people simply believed
+                there were no bots?
+                Even if the outcome seems similar, this small difference made me
+                think more deeply about perception and platform responsibility.
+                If users cannot tell bots and humans apart, what should platforms do?
+                How can platforms prevent fake-human bots from influencing recommendation
+                systems through likes, reposts, and comments?
             </p>
 
             <p>
-
+                Even after these discussions, I still have several open questions.
+                What are the basic principles for designing bots?
+                What makes a bot good or bad?
+                We discussed ethical standards such as the Three Laws of Robotics,
+                but I am now more interested in thinking from the platform's perspective
+                rather than the creator's perspective.
+                What standards can platforms use to distinguish good and bad bots
+                at low cost?
+                Should bot accounts have the same status as human users?
+                If not, where should the boundary be drawn?
             </p>
 
-            <h4 class="mt-5">References</h4>
+            <h4 class="mt-5">Citation</h4>
 
             <p>
-
+                Stieglitz, S., Brachten, F., Ross, B., &amp; Jung, A. K. (2017).
+                Do social bots dream of electric sheep? A categorisation of social media bot accounts.
+                arXiv preprint arXiv:1710.04044.
             </p>
+
+            <p>
+                Savage, S., Monroy-Hernandez, A., &amp; Höllerer, T. (2016, February).
+                Botivist: Calling volunteers to action using online bots.
+                In Proceedings of the 19th ACM Conference on Computer-Supported Cooperative Work &amp; Social Computing
+                (pp. 813-822).
+            </p>
+        </section>
 
         </section>
 
