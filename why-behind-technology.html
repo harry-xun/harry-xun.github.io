@@ -609,7 +609,132 @@
         </section>
 
     </div>
+    <div class="container my-5 pt-5">
+        <h1>Theme 3: Social Media x Ethics</h1>
 
+        <section id="construction-theme3" class="my-5">
+            <h3>Construction</h3>
+            <p>
+                During the construction stage, I built a simple weather bot on Bluesky.
+                This bot shows the real-time weather, temperature, and humidity in Northfield.
+                The bot profile link is:
+                <a href="https://bsky.app/profile/harrycs302.bsky.social">
+                    https://bsky.app/profile/harrycs302.bsky.social
+                </a>.
+                Users can interact with the bot by searching for the account
+                harrycs302.bsky.social on Bluesky.
+            </p>
+
+            <p>
+                Each time the bot runs, it retrieves real-time weather data, humidity,
+                and temperature for Northfield using the Open-Meteo API, and then
+                publishes a post showing the current weather condition.
+                After that, based on the returned weather condition, the bot selects
+                a representative image from a local image library containing more than
+                30 weather images and sends it together with the post.
+                An example post is shown below.
+            </p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="img/weather_bot.png" class="project-image projectshowcase" alt="weather post">
+                    <div class="image-caption">
+                        weather bot post example
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+                Below, I explain how the system was implemented based on different
+                functional components following the order of the code design.
+            </p>
+
+            <h4 class="mt-4">External Package</h4>
+
+            <p>
+                I used the weather API provided by Open-Meteo to retrieve real-time
+                weather data for Northfield. One advantage of this website is that it
+                provides an interactive API generator, where users can select variables
+                and parameters and directly obtain the corresponding Python API call.
+                The API relies on several external Python libraries to handle network
+                requests, caching, and request stability. Since the returned weather
+                result is represented as a numerical code, I hardcoded the mapping
+                between weather codes and text descriptions used in the final post.
+            </p>
+
+            <h4 class="mt-4">Text-only Post</h4>
+
+            <p>
+                After retrieving the weather data, I formatted the information into
+                natural language text. The generated message is then automatically
+                posted to Bluesky using the standard client.send_post function.
+            </p>
+
+            <h4 class="mt-4">Multimedia Post</h4>
+
+            <p>
+                At the same time as sending the text, the bot selects an image from a
+                local predefined image library based on the weather code returned by
+                the API. The selected image is uploaded together with the generated
+                text so that each post contains both informational text and visual
+                content. Image posting is implemented using the standard
+                client.send_image function.
+            </p>
+
+        </section>
+
+        <section id="deconstruction-theme3" class="my-5">
+            <h3>Deconstruction</h3>
+
+            <h4 class="mt-4">Class Discussion and My Reflection</h4>
+
+            <p>
+
+            </p>
+
+            <p>
+
+            </p>
+
+            <h4 class="mt-5">Pre-class Readings and My Reflection</h4>
+
+            <p>
+
+            </p>
+
+            <p>
+
+            </p>
+
+            <h4 class="mt-5">Bias and System-Level Reflection</h4>
+
+            <p>
+
+            </p>
+
+            <p>
+
+            </p>
+
+            <h4 class="mt-5">Open Questions and Lingering Reflections</h4>
+
+            <p>
+
+            </p>
+
+            <p>
+
+            </p>
+
+            <h4 class="mt-5">References</h4>
+
+            <p>
+
+            </p>
+
+        </section>
+
+    </div>
 
     <footer class="text-white">
         &copy; Harry Xun, All Rights Reserved.
