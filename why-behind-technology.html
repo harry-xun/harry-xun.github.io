@@ -788,6 +788,324 @@
             </p>
         </section>
 
+
+        <section id="construction-themeX" class="my-5">
+            <h3>Construction</h3>
+
+            <p>
+                Money is often called the root of all evil. In simple terms, money is a system that defines who owns
+                what.
+                Traditionally, money is connected to some physical object, such as gold or shells. Even the numbers in a
+                bank account usually correspond to actual dollars held by the bank.
+            </p>
+
+            <p>
+                Cryptocurrency works very differently. It was designed as a decentralized system, meaning that no single
+                authority manages the database, and there is no physical object backing it. When it first appeared, many
+                people thought it was a joke. However, over time cryptocurrency has shown significant commercial value
+                and has become important in many kinds of transactions.
+            </p>
+
+            <h4>Overview</h4>
+
+            <p>
+                In this project, we explore how cryptocurrency and blockchain systems work.
+                Using a simplified example, we explain how ownership and transactions can be
+                recorded in a decentralized system. The goal is to show the basic mechanisms
+                behind cryptocurrency, including how transactions are created, how ownership
+                is verified through digital signatures, and how records are maintained across
+                a distributed network instead of a central authority.
+            </p>
+
+            <p>
+                To make these ideas easier to understand, we first introduce a simple example
+                during the concept explanation. In the demonstration section, we then recreate
+                this same scenario in a more technical way. The demo shows how a transaction is
+                constructed, how other nodes verify whether the sender actually owns the coins,
+                and how cryptographic tools such as hashing and digital signatures are used to
+                secure the system.
+            </p>
+
+            <p>
+                Rather than reproducing the full complexity of real-world systems like Bitcoin,
+                our demonstration focuses on the core ideas behind blockchain. By rebuilding the
+                example step by step, we illustrate how decentralized verification, cryptographic
+                hash functions, and transaction validation work together to maintain a shared
+                ledger without relying on a central database.
+            </p>
+
+            <h4>Core Technical Concept</h4>
+
+            <p>
+                Cryptocurrency is a decentralized transaction system. Instead of a bank
+                maintaining a central database, many computers in the network keep copies
+                of the same transaction record. Ownership is determined by consensus: if
+                the network agrees that someone has the right to spend certain coins, that
+                person is considered the owner.
+            </p>
+
+            <p>
+                Each participant has a public key and a private key. The public key works
+                like an account name, while the private key is used to generate a digital
+                signature that proves a transaction was authorized by the owner. Other
+                participants can verify this signature using the public key without seeing
+                the private key itself.
+            </p>
+
+            <p>
+                Valid transactions are grouped into blocks and added to the blockchain
+                through a process called mining. Miners repeatedly compute hashes of the
+                block data while changing a value called a nonce. Once a hash meets the
+                required difficulty target, the block can be added to the shared
+                transaction history.
+            </p>
+
+
+
+            <h4>Demo</h4>
+
+            <p>
+                Our demonstration is based on the open source project
+                <a href="https://github.com/nambrot/blockchain-in-js">blockchain-in-js</a>.
+                This project provides a simple implementation of a blockchain system written
+                in JavaScript. It includes basic components such as transactions, blocks,
+                mining, and hash verification. We used this project as the base environment
+                to illustrate how a cryptocurrency network works.
+            </p>
+
+            <p>
+                In the demo, we recreate the example introduced earlier. At the beginning,
+                SpongeBob owns 10 carlcoins, Patrick owns none, and Squidward acts as the
+                miner in the network. SpongeBob creates a transaction to send 5 carlcoins
+                to Patrick and signs the transaction using his private key. The transaction
+                is then broadcast to the network for verification.
+            </p>
+
+            <p>
+                Squidward checks whether the signature is valid and whether SpongeBob
+                actually owns the coins he is trying to spend. If the transaction passes
+                these checks, Squidward includes it in a candidate block and starts the
+                mining process. During mining, the program repeatedly changes the nonce
+                and computes hashes until the block satisfies the required condition.
+                Once a valid hash is found, the block is accepted and added to the
+                blockchain.
+            </p>
+
+
+            <video controls width="600" aria-label="Cryptocurrency transaction and mining demonstration">
+                <source src="demo.mp4" type="video/mp4">
+            </video>
+
+
+            <h4>Citations</h4>
+
+            <p>
+                Nambrot. (2025). <em>GitHub - nambrot/blockchain-in-js: Build your own blockchain!</em> GitHub.
+                <a href="https://github.com/nambrot/blockchain-in-js">
+                    https://github.com/nambrot/blockchain-in-js
+                </a>
+            </p>
+
+
+        </section>
+
+
+
+        <section id="deconstruction-themeX" class="my-5">
+            <h3>Deconstruction</h3>
+
+            <h4 class="mt-4">Philosophical Approach and My Reflection</h4>
+
+            <p>
+                One philosophical approach that influenced my thinking is metaphysics.
+                In previous classes, we spent a lot of time discussing the question of what a computer is.
+                These discussions went far beyond engineering concerns and instead asked,
+                from a philosophical perspective, what conditions are necessary for something
+                to count as a computer.
+            </p>
+
+            <p>
+                At the time, we discussed a question that generated a lot of debate:
+                if a computer is broken or has no power, is it still a computer?
+                This question was very novel to me.
+                It shifted the way I think about objects from focusing on their material
+                properties to focusing on their conceptual function.
+                If an object loses the function that defines it, then it may also lose
+                the property of being that object.
+            </p>
+
+            <p>
+                Compared with computers, cryptocurrency is an even more abstract technological
+                idea. I have never personally used this technology, so I tried to understand it
+                through a series of thought experiments. I gradually removed different functions
+                of the system and asked what would remain.
+            </p>
+
+            <p>
+                For example, if the blockchain mechanism disappeared, would cryptocurrency
+                still exist? What if there were no users? What if the market value dropped
+                to zero? Through this process of reasoning, I began to think about which
+                components are essential for something to count as cryptocurrency.
+            </p>
+
+            <p>
+                After this reflection, I also proposed a question for the audience to discuss.
+                I will return to this question in the following section.
+            </p>
+            <p>
+                Another philosophical approach that influenced my thinking is ontology,
+                which studies what exists and what makes something a thing rather than nothing.
+                One classic philosophical question related to ontology is the following:
+                if everyone believes something is true, does that make it true?
+            </p>
+
+            <p>
+                This question is often easy to challenge. For example, people in the past
+                widely believed that the Sun revolved around the Earth, but this belief
+                was clearly incorrect. However, when this question is applied to
+                cryptocurrency, the situation becomes more interesting.
+            </p>
+
+            <p>
+                From a philosophical perspective, a transaction in a cryptocurrency
+                network can be understood as a process of belief change.
+                If we treat each user's computer as an individual participant,
+                then a transaction occurs when the network collectively accepts
+                that the ownership of certain coins has changed.
+            </p>
+
+            <p>
+                In other words, the ownership recorded in the blockchain exists
+                because the network agrees that it exists. The transaction process
+                synchronizes this belief across many participants.
+                Through consensus, all nodes update their records and accept the
+                new ownership state.
+            </p>
+
+
+            <h4 class="mt-5">In-Class Discussion Questions</h4>
+
+            <p>
+                In the previous section, I argued that the network is the core of cryptocurrency.
+                The existence of each participant and their agreement about ownership is what
+                allows the system to function. Based on this idea, I proposed several questions
+                during class discussion.
+            </p>
+
+            <ul class="requirement-list">
+
+                <li>
+                    If all computers running Bitcoin were turned off, but the protocol and transaction
+                    records still existed, would Bitcoin still exist?
+                </li>
+
+                <li>
+                    To further explore the relationship between ontology and cryptocurrency:
+                    if no one recognized Bitcoin as valuable, would Bitcoin still exist,
+                    or would it simply become meaningless data?
+                    <br>
+                    Follow-up: Is belief alone enough to create existence?
+                </li>
+
+                <li>
+                    Cryptocurrency is often described as decentralized, but several observations
+                    suggest that it may not be fully so. Prices and trading activity still respond
+                    strongly to government regulation. Participation in validation or governance
+                    may concentrate among smaller groups such as validators or early investors.
+                    In addition, most users rely on centralized exchanges rather than running
+                    their own nodes.
+                    <br>
+                    Question: If cryptocurrency is technically decentralized but socially dependent
+                    on institutions and large actors, is it truly decentralized?
+                </li>
+
+                <li>
+                    Another issue concerns transparency and privacy. All blockchain transactions
+                    are public and can be tracked through public keys. While this transparency
+                    helps secure the system, investigative tools have also made it possible to
+                    link public keys to real identities.
+                    <br>
+                    Question: Would you give up some degree of privacy in exchange for stronger
+                    security for your money?
+                </li>
+
+            </ul>
+
+
+            <h4 class="mt-5">How the In-Class Discussion Shaped My Thinking</h4>
+
+            <p>
+                During the discussion that our group led, many interesting points were raised,
+                although because some time has passed I cannot clearly recall exactly who said
+                each comment. One central topic concerned the first question: what exactly is
+                the core of cryptocurrency? Some classmates discussed whether the essence of
+                cryptocurrency lies in the blockchain algorithm itself or in the consensus
+                among users. This line of thinking naturally extended to the second question
+                about whether Bitcoin would still exist if no one recognized its value.
+            </p>
+
+            <p>
+                Two main directions emerged in the discussion. One view suggested that if a
+                blockchain system can be restarted after being shut down, then it still counts
+                as the same blockchain. This response made me reflect on the design of my
+                original question. My intention was to imagine a situation where users and
+                consensus were completely removed, but I realized that my question did not
+                clearly specify this assumption. This showed me that thought experiments need
+                to be formulated very carefully.
+            </p>
+
+            <p>
+                Another perspective focused on the idea that cryptocurrency is fundamentally a
+                technology defined by algorithms. From this viewpoint, even without an active
+                network, the concept of cryptocurrency would still exist because it is defined
+                by its technical structure. This made me think more about the dual nature of
+                technological concepts and philosophical concepts. The same object may be
+                understood very differently by a computer scientist and by a social scientist.
+                In this course, we often stand somewhere between these two perspectives.
+            </p>
+
+
+            <p>
+                The discussion on the final day of class about NFTs also led me to a new
+                perspective about the internet itself and how it challenges traditional
+                definitions. In that class, we were shown two digital artworks: a digital
+                version of the Mona Lisa and another piece based on Stephen Curry whose
+                appearance could change depending on his game performance. Fans could also
+                copy the image and create their own versions. This example broke many of the
+                assumptions behind traditional art. One hundred years ago, art usually meant
+                paintings or sculptures stored in museums. People could not carry them in
+                their pockets, nor could everyone easily make a copy. The internet changed
+                this situation completely and forced us to rethink what counts as art.
+            </p>
+
+            <p>
+                I began to see cryptocurrency in a similar way. Before learning about
+                cryptocurrency, I did not think that other digital payment systems, such as
+                PayPal, fundamentally changed the nature of money. These systems mainly made
+                transactions faster and more convenient, but they did not change who controls
+                money or who regulates the system. Cryptocurrency, however, breaks this
+                pattern because it is designed as a decentralized system. Since previous
+                monetary systems were not structured in this way, cryptocurrency pushes us to
+                reconsider what the essence of a money system actually is.
+            </p>
+
+            <h4 class="mt-5">Citation</h4>
+
+            <p>
+                Davis, M. (2019). <em>The Universal Computer: The Road from Leibniz to Turing</em> (3rd ed.). CRC Press.
+                https://doi.org/10.1201/9781315144726
+            </p>
+
+            <p>
+                Wilsdon, L., &amp; Véliz, C. (2022). Privacy Is Power: Why and How You Should Take Back Control of Your
+                Data.
+                <em>International Data Privacy Law</em>, 12(3), 255–257.
+                https://doi.org/10.1093/idpl/ipac007
+            </p>
+
+
+        </section>
+
         </section>
 
     </div>
